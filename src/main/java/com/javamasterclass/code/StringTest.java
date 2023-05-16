@@ -1,4 +1,4 @@
-package com.javamasterclass.codetest;
+package com.javamasterclass.code;
 
 import java.util.Locale;
 

@@ -1,4 +1,4 @@
-package com.javamasterclass.codetest;
+package com.javamasterclass.code;
 
 public class InstanceVariableHiding {
     int varA;
