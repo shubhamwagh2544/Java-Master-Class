@@ -1,4 +1,4 @@
-package com.javamasterclass.intro;
+package com.javamasterclass.intro.javaispassbyvalue;
 
 public class Person {
     String name;
