@@ -29,8 +29,9 @@ public class GenericExercise1 {
         list1.forEach(System.out::println);
 
         //Compiler will give error : Required type Object | Provided type String
-       List<Object> list2 = list1; //even if string is type of object, we can't assign one over another in generics
-        // hence generics provides type safety at compile time
+        /* List<Object> list2 = list1; */
+       //even if string is type of object, we can't assign one over another in generics
+        //hence generics provides type safety at compile time
 
     }
 }
