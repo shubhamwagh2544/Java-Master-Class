@@ -2,7 +2,7 @@ package com.javamasterclass.oops.polymorphism.method_overriding;
 
 public class Parent {
     /*
-            - private cant be overridden
+            - private cant be overridden in subclasses as they are class-accessible only (however overridden in inner classes)
             - we cant narrow down the access scope while overriding
             - final cant be overridden
             - instance method cant override static method (subclass instance method-same signature cant override parent static method)
@@ -13,7 +13,7 @@ public class Parent {
     void call1() {
         System.out.println("parent called");
     }
-    private void call2() {} //cant override + cant be called parent reference(Parent parent = new Child())
+    private void call2() {} //cant override + cant be called parent reference(Parent parent = new Child() : runtime/dynamic poly) - visible to declared class only
     final void call3() {   //cant override + but called by parent reference
         System.out.println("parent final called");
     }
@@ -26,4 +26,18 @@ public class Parent {
     protected void call6() {
         System.out.println("parent called");
     }
+    /*
+            - overridden method in the subclass can only throw the same exception or subtype of exception
+            - overridden method cannot throw any new checked exceptions that are not already declared by the superclass method
+            - subclass is allowed to throw any unchecked exceptions (RuntimeExceptions) without any restrictions,
+              even if the superclass method does not declare them.
+
+     */
+    void call7() throws RuntimeException {
+        System.out.println("runtime exception called in parent");
+    }
+    private void call8() {  //private-visible to parent class only
+        System.out.println("private call in parent");
+    }
+
 }

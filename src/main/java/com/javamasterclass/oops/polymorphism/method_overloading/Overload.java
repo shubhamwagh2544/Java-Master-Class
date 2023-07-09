@@ -1,10 +1,9 @@
 package com.javamasterclass.oops.polymorphism.method_overloading;
 
 import java.time.LocalDate;
-import java.util.Date;
 
 public class Overload {
-    void call(int a) {}
+    void call(int a) {} //method signature should be changed for overloading (simply changing return type won't overload-CE)
     void call(String str) {}
     void call(int a, String str) {}
     String call() {return "temp";}   // parameter list should be different from earlier method versions
