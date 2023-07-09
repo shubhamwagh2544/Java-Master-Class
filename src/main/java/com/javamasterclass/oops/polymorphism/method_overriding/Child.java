@@ -1,11 +1,11 @@
 package com.javamasterclass.oops.polymorphism.method_overriding;
 
 public class Child extends Parent {
-    void call1() {
+    void call1() {      //non-static to non-static (instance method override -> dynamic/runtime polymorphism)
         //super.call(); // parent call method is invoked with super
         System.out.println("child called");
     }
-    static void call4() {
+    static void call4() {       //static to non-static OR non-static to static is CE | static to static is Method hiding
         System.out.println("child called");
     }
 

@@ -15,7 +15,11 @@ class Dog extends Animal {
     }
 }
 
-
+/*
+        Covariant Method Overriding:
+        - return type of overridden method in subclass can be different from return type of parent class method
+        - allows the return type of overridden method in subclass to be subtype of return type of parent class method
+ */
 public class CovariantMethodOverriding {
     public static void main(String[] args) {
         //case 1
