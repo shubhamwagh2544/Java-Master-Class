@@ -10,7 +10,7 @@ public interface Interface {
     void greet(boolean bool);       //public abstract
 
     // default methods
-    public default void greet() {                       // no need of public
+    public default void greet() {          // no need of public -> default method cannot be private, protected, static, final
         System.out.println("Default: Greetings to " + NAME);
     }
     public default void greet(int a) {
@@ -18,7 +18,7 @@ public interface Interface {
     }
 
     //static methods
-    private static void sayMyName() {
+    private static void sayMyName() {     // static method can be private, public -> cannot protected, static, final
         System.out.println("static of interface");
     }
     public static void sayMyName2() {
