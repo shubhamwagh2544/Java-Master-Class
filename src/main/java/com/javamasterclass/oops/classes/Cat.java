@@ -1,5 +1,14 @@
 package com.javamasterclass.oops.classes;
 
+/*
+        class - cannot be private, protected
+              - can be static, final, public
+                      (inner) (string)
+
+        static - property of class
+        final - can't override to make changes
+        public - accessible by all
+ */
 public class Cat {
     private String name;
     private Cat(String name) {          // private parametrized constructor

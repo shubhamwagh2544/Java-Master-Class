@@ -3,6 +3,7 @@ package com.javamasterclass.code;
 /*
         - class can be abstract without any abstract method inside
         - but if any abstract method inside, class has to be abstract
+        - abstract class cannot be private, final
  */
 abstract class Test {
     static void sayHi() {
