@@ -9,7 +9,7 @@ public class SwapWithoutThird {
         System.out.println("one: " + one + " & two: " + two);
     }
     private static void swap(int one, int two) {
-        //XOR operator
+        //XOR operator          // [0 xor 0 = 0], [1 xor 1 = 0], [0 xor 1 = 1], [1 xor 0 = 1]
         one = one ^ two;
         two = one ^ two;
         one = one ^ two;

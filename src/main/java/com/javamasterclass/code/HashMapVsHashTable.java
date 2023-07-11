@@ -14,7 +14,7 @@ class HashMapEx {
     }
 
     public void addKeyValue(Integer key, String value) {        //allows one null key and multiple null values
-        hashMap.put(key, value);
+        hashMap.put(key, value);        // no duplicate keys - whatever key, only one time add else update existing
     }
     public String getValue(Integer key) {
         return hashMap.get(key);
