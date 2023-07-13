@@ -23,7 +23,12 @@ class ThreadExTwo extends Thread {
         System.out.println(currentThread() + " is running");
 
         // Set an uncaught exception handler for the thread
-        //either pass as lambda : UncaughtExceptionHandler is Functional Interface
+        /*
+            either pass as lambda : UncaughtExceptionHandler is Functional Interface
+            UncaughtExceptionHandler handler = (Thread t, Throwable e) -> {
+                // Exception handling logic
+            };
+        */
         Thread.currentThread().setUncaughtExceptionHandler(new Thread.UncaughtExceptionHandler() {
             @Override
             public void uncaughtException(Thread t, Throwable e) {

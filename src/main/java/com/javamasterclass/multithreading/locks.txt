@@ -1,0 +1,67 @@
+###
+Java objects can provide lock and synchronization through the use of intrinsic locks => monitor locks.
+Every object in Java has an associated lock, which is used to control access to the object's critical sections.
+
+1. Synchronized Blocks:
+- You can use the synchronized keyword to create synchronized blocks of code.
+- When a thread enters a synchronized block, it acquires the lock associated with the object referenced by the synchronized keyword.
+- Other threads attempting to enter the synchronized block must wait until the lock is released.
+
+        synchronized (object) {
+            // Synchronized block
+            // Only one thread can execute this block at a time
+        }
+// Only one thread can execute this block at any given time, preventing concurrent access to the critical section.
+
+2. Synchronized Methods:
+- You can also apply the synchronized keyword to an entire method.
+- When a thread invokes a synchronized method, it automatically acquires the lock associated with the object on which the method is called.
+- Other threads trying to invoke the same synchronized method on the same object must wait for the lock to be released.
+
+        public synchronized void synchronizedMethod() {
+            // Synchronized method
+            // Only one thread can execute this method at a time
+        }
+
+3. Reentrant Locks:
+- The java.util.concurrent.locks.ReentrantLock class provides an alternative to intrinsic locks.
+- Reentrant locks can be used when you require more flexibility and control over lock behavior.
+
+        Lock lock = new ReentrantLock();
+        lock.lock();
+        try {
+            // Critical section
+        } finally {
+            lock.unlock();
+        }
+- ReentrantLock is used to acquire and release the lock explicitly using the lock() and unlock() methods.
+- The critical section of code is executed within the try-finally block to ensure the lock is always released,
+  even in the case of an exception.
+
+###
+Issues in Concurrent Programming
+1. Race Condition
+- It arises when two or more threads access shared data or resources concurrently,
+  and the final result becomes unpredictable or incorrect due to unexpected interleaving of their operations.
+
+        public class Counter {
+            private int count;
+            public void increment() {
+                count = count + 1; // Non-atomic operation
+            }
+        }
+        Counter counter = new Counter();
+
+        // Thread 1
+        counter.increment(); // count = 1
+
+        // Thread 2
+        counter.increment(); // count = 2 (expected), but due to race condition, it might be 1 or some other unexpected value
+
+2. Deadlock
+- Deadlock is a situation that occurs in concurrent programming when two or more threads are blocked indefinitely,
+  waiting for each other to release resources or take certain actions.
+- thus it is a state where threads are stuck and unable to make progress.
+  example:
+  Thread A holds Resource 1 and waits for Resource 2.
+  Thread B holds Resource 2 and waits for Resource 1.

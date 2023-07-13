@@ -61,3 +61,11 @@ InterThread Communication & Synchronization
    - The notifyAll() method is used to notify all the threads that are waiting on the object.
    - When a thread invokes notifyAll(), all threads in the wait set of the object are awakened and enter the "runnable" state.
      However, only one thread at a time can acquire the lock and proceed with its execution.
+
+###
+Concurrent Data Structures - java.util.concurrent package
+1. ConcurrentHashMap
+2. ConcurrentLinkedQueue
+3. ConcurrentSkipListMap / ConcurrentSkipListSet
+4. CopyOnWriteArrayList
+5. BlockingQueue => to share data between two threads
