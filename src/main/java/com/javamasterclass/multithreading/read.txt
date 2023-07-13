@@ -1,0 +1,63 @@
+###
+Multithreading:
+- program/process is divided into two or more subprograms/subprocesses which can be implemented at same time in parallel/concurrently
+  by running two or more threads.
+
+
+###
+Multitasking:
+- doing two or more tasks at same time/simultaneously
+
+
+###
+process based multitasking                           Thread based Multitasking
+- expensive                                          - cheap
+- each process has own memory/address                - threads within process share same memory/address
+- heavyweight                                        - lightweight
+
+###
+Life Cycle of Thread
+- new thread created => newborn
+- start() is called => runnable / running :- [thread waiting for processor to execute => runnable] / [thread executing => running]
+- runnable --> running :- start()
+- running --> runnable :- yield()
+
+- running/runnable thread can be => blocked :- 3 methods :- suspend()    wait()      sleep()
+- blocked thread to be put into running/runnable :-         resume()     notify()    automatic waked when time elapsed
+
+newborn/running/runnable/blocked thread to stop :- stop() is called => Dead
+
+newborn => new thread
+running/runnable => active thread
+blocked => idle thread
+dead => dead thread
+
+###
+Whenever java program starts, main thread starts running and when program terminates, main thread is killed/terminated.
+
+###
+Thread Methods
+1. start() => Thread.start()
+2. stop() => Thread.stop() throws InterruptedException
+3. sleep() => Thread.sleep(milliseconds) throws InterruptedException
+4. isAlive() => Thread.isAlive()
+5. join() => Thread.join() throws InterruptedException
+6. yield() => Thread.yield()
+
+###
+InterThread Communication & Synchronization
+7. wait() =>
+   - The wait() method is called on an object within a synchronized context
+     (i.e., within a block of code synchronized on the same object - Critical Section)
+   - When a thread encounters the wait() method, it releases the lock on the object and enters a waiting state,
+     allowing other threads to acquire the lock and continue execution.
+   - The waiting thread remains in the wait set until
+     another thread invokes notify() or notifyAll() method on the same object, or until it is interrupted.
+8. notify() =>
+   - The notify() method is used to notify a single waiting thread
+     that is in the wait set of the object on which the method is invoked.
+   - When a thread invokes notify(), it signals one randomly chosen thread in the wait set to wake up and proceed with its execution.
+9. notifyAll() =>
+   - The notifyAll() method is used to notify all the threads that are waiting on the object.
+   - When a thread invokes notifyAll(), all threads in the wait set of the object are awakened and enter the "runnable" state.
+     However, only one thread at a time can acquire the lock and proceed with its execution.
