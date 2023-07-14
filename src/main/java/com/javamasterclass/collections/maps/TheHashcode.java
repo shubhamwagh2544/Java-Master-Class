@@ -1,6 +1,4 @@
-package com.javamasterclass.data_structures.maps;
-
-import jdk.jfr.Percentage;
+package com.javamasterclass.collections.maps;
 
 import java.util.HashMap;
 import java.util.Map;

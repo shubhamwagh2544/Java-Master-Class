@@ -1,4 +1,4 @@
-package com.javamasterclass.data_structures.sets;
+package com.javamasterclass.collections.sets;
 
 import java.util.HashSet;
 import java.util.Objects;

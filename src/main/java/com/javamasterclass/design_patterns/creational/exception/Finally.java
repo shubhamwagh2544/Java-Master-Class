@@ -1,4 +1,4 @@
-package com.javamasterclass.exception;
+package com.javamasterclass.design_patterns.creational.exception;
 
 public class Finally {
     /*

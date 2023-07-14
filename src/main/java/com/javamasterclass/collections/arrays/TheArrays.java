@@ -1,4 +1,4 @@
-package com.javamasterclass.data_structures.arrays;
+package com.javamasterclass.collections.arrays;
 
 import java.util.Arrays;
 

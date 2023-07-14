@@ -1,4 +1,4 @@
-package com.javamasterclass.exception.customexception;
+package com.javamasterclass.design_patterns.creational.exception.customexception;
 
 public class Main {
     /*

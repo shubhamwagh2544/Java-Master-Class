@@ -1,7 +1,6 @@
-package com.javamasterclass.exception;
+package com.javamasterclass.design_patterns.creational.exception;
 
 import java.io.File;
-import java.io.IOException;
 
 public class WhatException {
     /*

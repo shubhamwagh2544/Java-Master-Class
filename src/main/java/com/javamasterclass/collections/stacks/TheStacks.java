@@ -1,4 +1,4 @@
-package com.javamasterclass.data_structures.stacks;
+package com.javamasterclass.collections.stacks;
 
 import java.util.Stack;
 

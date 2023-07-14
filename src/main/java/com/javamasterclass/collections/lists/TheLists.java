@@ -1,4 +1,4 @@
-package com.javamasterclass.data_structures.lists;
+package com.javamasterclass.collections.lists;
 
 import java.util.ArrayList;
 import java.util.List;

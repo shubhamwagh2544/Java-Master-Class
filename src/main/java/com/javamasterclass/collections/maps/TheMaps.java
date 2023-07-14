@@ -1,4 +1,4 @@
-package com.javamasterclass.data_structures.maps;
+package com.javamasterclass.collections.maps;
 
 import java.util.HashMap;
 import java.util.Map;

@@ -1,4 +1,4 @@
-package com.javamasterclass.data_structures.queues;
+package com.javamasterclass.collections.queues;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -23,5 +23,5 @@ public class TheQueues {
         System.out.println(queue.peek());
     }
 
-    static record Person(String name, int age) {}
+    record Person(String name, int age) {}
 }

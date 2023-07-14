@@ -1,4 +1,4 @@
-package com.javamasterclass.data_structures.linked_lists;
+package com.javamasterclass.collections.linked_lists;
 
 import java.util.LinkedList;
 import java.util.ListIterator;
