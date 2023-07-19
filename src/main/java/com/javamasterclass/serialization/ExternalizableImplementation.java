@@ -62,5 +62,11 @@ public class ExternalizableImplementation {
         //byte stream deserialized into object
         Teacher teacher1 =(Teacher) objectInputStream.readObject();
         System.out.println(teacher1);                           //after serializing object
+
+        fileInputStream.close();
+        fileOutputStream.close();
+
+        objectInputStream.close();
+        objectOutputStream.close();
     }
 }

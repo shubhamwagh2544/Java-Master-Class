@@ -54,5 +54,11 @@ public class SerializationImplementation {
         Student student1 =(Student) objectInputStream.readObject();
         System.out.println(student1);                           //after serializing object
 
+        fileInputStream.close();
+        fileOutputStream.close();
+
+        objectInputStream.close();
+        objectOutputStream.close();
+
     }
 }
