@@ -14,7 +14,7 @@ import java.util.concurrent.ConcurrentHashMap;
           lock was placed on whole buckets (all buckets were locked until that one operation is completed)
 
         - ConcurrentHashMap : ConcurrentHashMap in java.util.concurrent
-        - Pros : Performance Faster => Fine-Grained Lock on each bucket
+        - Pros : Performance Faster => Fine-Grained Lock on each bucket => Segment Locking Mechanism
         - In multithreaded env, when threads are doing read operation, no locks on all buckets (all buckets are open to read)
         - If thread is doing write/update operation, then that specific bucket is only locked (all other buckets are open to read)
  */
