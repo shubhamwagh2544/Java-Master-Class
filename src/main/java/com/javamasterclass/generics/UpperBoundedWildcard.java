@@ -2,7 +2,7 @@ package com.javamasterclass.generics;
 
 import java.util.List;
 
-public class UpperBoundedWildcard {
+public class UpperBoundedWildcard {     // ? extends Class
 
     public static void print(List<Double> list) {
         list.forEach(System.out::println);

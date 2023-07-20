@@ -2,7 +2,7 @@ package com.javamasterclass.generics;
 
 import java.util.List;
 
-public class LowerBoundedWildcard {
+public class LowerBoundedWildcard {     // ? super Integer
     public static void print(List<? super Integer> list) {
         list.forEach(System.out::println);
     }

@@ -3,7 +3,7 @@ package com.javamasterclass.generics;
 import java.util.ArrayList;
 import java.util.List;
 
-public class UnboundedWildcard {
+public class UnboundedWildcard {        // ?
     public static void print(List<?> list) {
         list.forEach(System.out::println);
     }
