@@ -45,6 +45,7 @@ public class ReflectionAPI {
     public static void main(String[] args) throws InvocationTargetException, IllegalAccessException, InstantiationException {
         Student student = new Student("Shubham Wagh");
 
+
         //Class
         Class<?> studentClass = Student.class;          //We can explicitly give Student in <> or unbounded wildcard
         String className = studentClass.getName();
@@ -65,6 +66,15 @@ public class ReflectionAPI {
             //Object is required to get/set field value
             field.setAccessible(true);
             Object o = field.get(student);                  //cannot access private method until setAccessible(true)
+            System.out.println(o);
+
+            //setting value
+            if (field.getName().equals("name")) {
+                field.set(student, "Random Value");
+            }
+            else {
+                field.set(student, 12);                 //changing final field value using reflection API (security risk)
+            }
         }
 
         //methods
