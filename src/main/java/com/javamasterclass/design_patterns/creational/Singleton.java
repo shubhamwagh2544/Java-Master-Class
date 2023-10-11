@@ -18,6 +18,12 @@ class SingleTonInstance {
     public static synchronized SingleTonInstance getInstance() {
         return singleTonInstance;
     }
+    /*
+            synchronized : allowing only one thread to execute at any given time
+                         : mechanism to avoid race conditions by synchronizing thread access to shared data
+            race condition :
+                        it occurs when two or more threads attempt to update mutable shared data at the same time
+     */
 
 }
 public class Singleton {
