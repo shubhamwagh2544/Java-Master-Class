@@ -1,4 +1,4 @@
-package com.javamasterclass.design_patterns.creational.exception;
+package com.javamasterclass.exception;
 
 import java.io.File;
 

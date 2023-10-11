@@ -1,4 +1,4 @@
-package com.javamasterclass.design_patterns.creational.exception.customexception;
+package com.javamasterclass.exception.customexception;
 
 public class MyUnCheckedException extends Exception{
     public MyUnCheckedException(String message) {

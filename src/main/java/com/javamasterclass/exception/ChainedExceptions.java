@@ -1,4 +1,4 @@
-package com.javamasterclass.design_patterns.creational.exception;
+package com.javamasterclass.exception;
 
 public class ChainedExceptions {
     public static void main(String[] args) throws Exception {
