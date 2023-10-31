@@ -17,7 +17,7 @@ import java.util.List;
         - implemented separately from class being compared
         - direct control over comparison
         - provides custom comparison logic for class
-        - compare() method can compare object of this class with - either with same class - or with another class object
+        - compare() method can compare object of objects of different classes
  */
 class Employer {
 
