@@ -29,12 +29,13 @@ public class Journal {
         finally {
             System.out.println(
                     """
-                            "try-with-resources" statement :
-                            resource closed automatically when no longer needed
+                    "try-with-resources" statement :
+                    resource closed automatically when no longer needed
                     """
             );
         }
     }
+
     public static void main(String[] args) {
         Journal journal = new Journal();
         journal.addEntryToJournal("entry 1");
